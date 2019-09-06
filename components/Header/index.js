@@ -9,9 +9,12 @@
 //  </div >
 // And add it to the DOM in the .header-container component
 
-function Header(hHeader, hDate, hTimes, hTemp) {
+const placeHeader = document.querySelector(".header-container");
+placeHeader.appendChild(Header());
+
+function Header() { // removed parameters - its all strings!
 // define new elements
-const header = document.createElement("header");
+const header = document.createElement("div");
 const date = document.createElement("span");
 const times = document.createElement("h1");
 const temperature = document.createElement("span");
@@ -26,11 +29,10 @@ header.classList.add("header");
 date.classList.add("date");
 temperature.classList.add("temp");
 
-// set text content (use function parameter names)
-header.textContent = hHeader;
-date.textContent = hDate;
-times.textContent = hTimes;
-temp.textContent = hTemp;
+// set text content (use function parameter names) // they were all strings!
+date.textContent = "March 28, 2019";
+times.textContent = "Lambda Times";
+temperature.textContent = "98°";
 
 return header;
 }
