@@ -26,12 +26,12 @@
 
 axios.get("https://lambda-times-backend.herokuapp.com/topics")
     .then(response => {
-        console.log("Got data from Lambda");
+        // console.log("Got data from Lambda");
         // console.log(response);
         // console.log(response.data.topics);
         
         const topicArr = response.data.topics;
-        console.log(topicArr);
+        // console.log(topicArr);
 
         // const mainTabs = document.querySelector(".topics"); // moved to Tab function
 
