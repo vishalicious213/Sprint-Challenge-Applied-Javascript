@@ -9,10 +9,10 @@
 //  </div >
 // And add it to the DOM in the .header-container component
 
-function Header() {}
+function Header(hHeader, hDate, hTimes, hTemp) {
 // define new elements
 const header = document.createElement("header");
-const date = document.createElement("date");
+const date = document.createElement("span");
 const times = document.createElement("h1");
 const temperature = document.createElement("span");
 
@@ -27,3 +27,10 @@ date.classList.add("date");
 temperature.classList.add("temp");
 
 // set text content (use function parameter names)
+header.textContent = hHeader;
+date.textContent = hDate;
+times.textContent = hTimes;
+temp.textContent = hTemp;
+
+return header;
+}
