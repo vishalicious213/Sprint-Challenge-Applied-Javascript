@@ -22,6 +22,8 @@ header.appendChild(times);
 header.appendChild(temperature);
 
 // set class names (from HTML)
-
+header.classList.add("header");
+date.classList.add("date");
+temperature.classList.add("temp");
 
 // set text content (use function parameter names)
