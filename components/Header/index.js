@@ -17,7 +17,9 @@ const times = document.createElement("h1");
 const temperature = document.createElement("span");
 
 // setup structure of elements
-
+header.appendChild(date);
+header.appendChild(times);
+header.appendChild(temperature);
 
 // set class names (from HTML)
 
