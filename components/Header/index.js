@@ -10,3 +10,16 @@
 // And add it to the DOM in the .header-container component
 
 function Header() {}
+// define new elements
+const header = document.createElement("header");
+const date = document.createElement("date");
+const times = document.createElement("h1");
+const temperature = document.createElement("span");
+
+// setup structure of elements
+
+
+// set class names (from HTML)
+
+
+// set text content (use function parameter names)
