@@ -40,8 +40,17 @@ axios.get("https://lambda-times-backend.herokuapp.com/articles")
         const by = document.createElement("span");
     
         // setup structure of elements
-    
+        card.appendChild(headline);
+        card.appendChild(author);
+        author.appendChild(imgContainer);
+        imgContainer.appendChild(imgSrc);
+        imgContainer.appendChild(by);
+
         // set class names (from HTML)
+        card.classList.add("card");
+        headline.classList.add("headline");
+        author.classList.add("author");
+        imgContainer.classList.add("img-container");
         
         // set text content (function parameter names)
         
