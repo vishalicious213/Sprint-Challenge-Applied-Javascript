@@ -35,25 +35,57 @@ axios.get("https://lambda-times-backend.herokuapp.com/articles")
 
         const categoryList = ["bootstrap", "javascript", "jquery", "node", "technology"];
 
-        categoryList.forEach(type => {
-            console.log(type);
-            sendMe = `categories.${type}.forEach`;
-            sendMe((item, i) => {
-                const title = categories.bootstrap[i].headline;
-                const writer = categories.bootstrap[i].authorName;
-                const pic = categories.bootstrap[i].authorPhoto;
-                console.log(title, writer, pic);
-            })
+        // categoryList.forEach(type => {
+        //     console.log(type);
+        //     sendMe = `categories.${type}.forEach`;
+        //     sendMe((item, i) => {
+        //         const title = categories.bootstrap[i].headline;
+        //         const writer = categories.bootstrap[i].authorName;
+        //         const pic = categories.bootstrap[i].authorPhoto;
+        //         console.log(title, writer, pic);
+        //     })
     
-        })
-
-        // categories.bootstrap.forEach((item, i) => {
-        //     const title = categories.bootstrap[i].headline;
-        //     const writer = categories.bootstrap[i].authorName;
-        //     const pic = categories.bootstrap[i].authorPhoto;
-        //     console.log(title, writer, pic);
         // })
 
+        categories.bootstrap.forEach((item, i) => {
+            const title = categories.bootstrap[i].headline;
+            const writer = categories.bootstrap[i].authorName;
+            const pic = categories.bootstrap[i].authorPhoto;
+            console.log(title, writer, pic);
+            Article(title, writer, pic);
+        })
+
+        categories.javascript.forEach((item, i) => {
+            const title = categories.javascript[i].headline;
+            const writer = categories.javascript[i].authorName;
+            const pic = categories.javascript[i].authorPhoto;
+            console.log(title, writer, pic);
+            Article(title, writer, pic);
+        })
+
+        categories.jquery.forEach((item, i) => {
+            const title = categories.jquery[i].headline;
+            const writer = categories.jquery[i].authorName;
+            const pic = categories.jquery[i].authorPhoto;
+            console.log(title, writer, pic);
+            Article(title, writer, pic);
+        })
+
+        categories.node.forEach((item, i) => {
+            const title = categories.node[i].headline;
+            const writer = categories.node[i].authorName;
+            const pic = categories.node[i].authorPhoto;
+            console.log(title, writer, pic);
+            Article(title, writer, pic);
+        })
+
+        categories.technology.forEach((item, i) => {
+            const title = categories.technology[i].headline;
+            const writer = categories.technology[i].authorName;
+            const pic = categories.technology[i].authorPhoto;
+            console.log(title, writer, pic);
+            Article(title, writer, pic);
+        })
 
         // const categoriesArray = (Object.entries(categories)); // all the object categories as an array
         // console.log("Categories: ", categoriesArray);
@@ -87,7 +119,7 @@ axios.get("https://lambda-times-backend.herokuapp.com/articles")
         const headline = document.createElement("div"); // text
         const author = document.createElement("div"); // container
         const imgContainer = document.createElement("div"); //container
-        const imgSrc = document.createElement("a"); // URL
+        const imgSrc = document.createElement("img"); // URL
         const by = document.createElement("span"); // text
     
         // setup structure of elements
@@ -105,8 +137,9 @@ axios.get("https://lambda-times-backend.herokuapp.com/articles")
         
         // set text content (function parameter names)
         headline.textContent = title; // headline
-        imgSrc.textContent = pic; // authorPhoto
+        imgSrc.src = pic; // authorPhoto
         by.textContent = `By ${writer}`; // authorName
 
-
+        const cards = document.querySelector(".cards-container");
+        cards.appendChild(card)
     }
