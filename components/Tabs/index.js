@@ -16,4 +16,21 @@ axios.get("https://lambda-times-backend.herokuapp.com/topics")
     .catch(err => {
         console.log("Got error from Lambda", err)
     })
-    
+
+function Tab(arr) {
+    // define new elements
+    const newTab = document.createElement("div");
+
+    // setup structure of elements
+
+    // set class names (from HTML)
+    newTab.classList.add("tab");
+
+    // set text content (function parameter names)
+    newTab.textContent = "topic here";
+
+    arr.forEach(item => {
+        
+    })
+
+}
