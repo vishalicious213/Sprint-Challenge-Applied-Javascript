@@ -27,15 +27,18 @@
 axios.get("https://lambda-times-backend.herokuapp.com/topics")
     .then(response => {
         console.log("Got data from Lambda");
-        console.log(response);
-        console.log(response.data.topics);
+        // console.log(response);
+        // console.log(response.data.topics);
         
         const topicArr = response.data.topics;
         console.log(topicArr);
 
+        // const mainTabs = document.querySelector(".topics"); // moved to Tab function
+
         topicArr.forEach(item => {
-            newItem = item;
-            console.log(newItem) // got array of topic names
+            const newItem = Tab(item);
+            // console.log(newItem) // got array of topic names
+            // mainTabs.appendChild(newItem); // moved to Tab function
         }) // .topicArr
     }) // .then
     .catch(err => {
@@ -44,7 +47,7 @@ axios.get("https://lambda-times-backend.herokuapp.com/topics")
 
 
 
-function Tab(arr) {
+function Tab(tabItem) { //changed from array. take only 1 item at a time and make tab
     // define new elements
     const newTab = document.createElement("div");
 
@@ -54,10 +57,9 @@ function Tab(arr) {
     newTab.classList.add("tab");
 
     // set text content (function parameter names)
-    newTab.textContent = "topic here";
+    newTab.textContent = tabItem;
+    // console.log("tabItem is ", tabItem) // HOLY CRAP - IT READ IT!!
 
-    arr.forEach(item => {
-
-    })
-
+    const mainTab = document.querySelector(".topics");
+    mainTab.appendChild(newTab)
 }
