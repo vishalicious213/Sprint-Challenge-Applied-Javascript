@@ -28,3 +28,32 @@ axios.get("https://lambda-times-backend.herokuapp.com/articles")
     .catch(err => {
         console.log("Got error from Lambda", err)
     })
+
+
+    function Article(tabItem) { 
+        // define new elements
+        const card = document.createElement("div");
+        const headline = document.createElement("div");
+        const author = document.createElement("div");
+        const imgContainer = document.createElement("div");
+        const imgSrc = document.createElement("a");
+        const by = document.createElement("span");
+    
+        // setup structure of elements
+    
+        // set class names (from HTML)
+        
+        // set text content (function parameter names)
+        
+
+    }
+
+    // <div class="card">
+//   <div class="headline">{Headline of article}</div>
+//   <div class="author">
+//     <div class="img-container">
+//       <img src={url of authors image} />
+//     </div>
+//     <span>By {authors name}</span>
+//   </div>
+// </div>
