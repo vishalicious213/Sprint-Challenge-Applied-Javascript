@@ -32,12 +32,12 @@ axios.get("https://lambda-times-backend.herokuapp.com/articles")
 
     function Article(tabItem) { 
         // define new elements
-        const card = document.createElement("div");
-        const headline = document.createElement("div");
-        const author = document.createElement("div");
-        const imgContainer = document.createElement("div");
-        const imgSrc = document.createElement("a");
-        const by = document.createElement("span");
+        const card = document.createElement("div"); // container
+        const headline = document.createElement("div"); // text
+        const author = document.createElement("div"); // container
+        const imgContainer = document.createElement("div"); //container
+        const imgSrc = document.createElement("a"); // URL
+        const by = document.createElement("span"); // text
     
         // setup structure of elements
         card.appendChild(headline);
@@ -53,7 +53,9 @@ axios.get("https://lambda-times-backend.herokuapp.com/articles")
         imgContainer.classList.add("img-container");
         
         // set text content (function parameter names)
-        
+        headline.textContent = "" // headline
+        imgSrc.textContent = ""; // authorPhoto
+        by.textContent = `By `; // authorName
 
     }
 
